@@ -4,7 +4,7 @@ import '../styles.css'; // Import your styles here
 const BinaryBackground = () => {
   useEffect(() => {
     const binaryContainer = document.querySelector('.binary-container');
-    const numBinaryItems = 3970; // Adjust the number of binary items as needed
+    const numBinaryItems = 3969; // Adjust the number of binary items as needed
 
     for (let i = 0; i < numBinaryItems; i++) {
       const binary = document.createElement('div');
