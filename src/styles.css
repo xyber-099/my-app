@@ -1,0 +1,134 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Luminari', fantasy; /* Use Great Vibes with Luminari as fallback */
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.binary-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 0; /* Behind the text */
+    pointer-events: none;
+}
+
+.binary {
+    font-size: 12px;
+    color: green;
+    margin: 0;
+    flex: 0 0 15px;
+    transform: translateZ(-20px) rotateX(45deg) rotateY(20deg); /* Standard */
+    animation: binarySpin 7s linear infinite; /* Add animation keyframes for continuous rotation */
+}
+
+@keyframes binarySpin {
+    from {
+        transform: translateZ(-20px) rotateX(45deg) rotateY(20deg);
+    }
+    to {
+        transform: translateZ(-20px) rotateX(45deg) rotateY(360deg); /* Rotate a full circle */
+    }
+}
+
+.binary.clockwise {  
+    animation-direction: normal;  
+}  
+
+.binary.anticlockwise {  
+    animation-direction: reverse;  
+}  
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+h1.glitch {
+    font-size: 4em; /* Increased font size */
+    position: relative;
+    display: inline-block;
+    color: rgb(98, 192, 98);
+    text-align: left;
+    white-space: nowrap; /* Ensure words do not wrap */
+}
+
+h1.glitch span {
+    display: block;
+    opacity: 0;
+}
+
+.cyber, .range, .development {
+    position: relative;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    display: inline-block;
+}
+
+.cyber {
+    animation-name: cyberMove;
+    animation-timing-function: ease;
+    animation-delay: 0s, 0s;
+}
+
+.range {
+    animation-name: rangeMove;
+    animation-timing-function: ease;
+    animation-delay: 0.5s, 0.5s;
+    margin-top: 0.3em; /* Adjust to align "Range" below "Cyber" */
+    margin-left: 1.3em; /* Adjust to align "Range" below "Cyber" */
+}
+
+.development {
+    animation-name: developmentMove;
+    animation-timing-function: ease;
+    animation-delay: 1s, 1s;
+    margin-top: 0.3em; /* Adjust to align "Development" below "Range" */
+    margin-left: 2.6em; /* Adjust to align "Range" below "Cyber" */
+}
+
+@keyframes cyberMove {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rangeMove {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes developmentMove {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
