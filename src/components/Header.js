@@ -33,7 +33,7 @@ const Header = () => {
     animateText();
 
     // Reload content every 6 seconds
-    const interval = setInterval(reloadContent, 6000);
+    const interval = setInterval(reloadContent, 10000);
 
     // Cleanup on unmount
     return () => clearInterval(interval);
