@@ -132,3 +132,20 @@ h1.glitch span {
         transform: translateY(0);
     }
 }
+
+.login-button {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    padding: 10px 30px;
+    font-size: 17px;
+    font-weight: bold; /* Bold effect */
+    color:   rgb(98, 192, 98); /* Cyber green */
+    background: black;
+    border: 1px solid #ffffff;
+    border-radius: 7px; /* Soft corners */
+    cursor: pointer;
+    transition: all 0.5s ease-in-out; /* Smooth transition */
+    transform: perspective(500px) rotateY(0deg); /* Initial transform */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Initial shadow */
+}
