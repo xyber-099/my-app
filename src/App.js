@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <BinaryBackground />
       <Header />
+      <button className="login-button">LOGIN</button>
       <audio id="background-audio" autoPlay loop>
         <source src="./Dark-Light[Cropped].mp3" type="audio/mp3" />
       </audio>
